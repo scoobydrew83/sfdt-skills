@@ -1,19 +1,76 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T05:18:10.531Z",
+  "generatedAt": "2026-07-20T22:41:59.763Z",
   "skills": [
     {
-      "name": "sfdt-cli",
-      "path": "skills/sfdt-cli/SKILL.md",
-      "folderPath": "skills/sfdt-cli",
-      "category": "sfdt",
+      "name": "sf-apex-review",
+      "path": "skills/sf-apex-review/SKILL.md",
+      "folderPath": "skills/sf-apex-review",
+      "category": "salesforce",
       "files": [
-        "SKILL.md",
-        "references/commands.md",
-        "references/config.md",
-        "references/development.md"
+        "SKILL.md"
       ],
-      "description": "Guide for using AND contributing to the @sfdt/cli (Salesforce DevTools) CLI. Use when: (1) the user mentions sfdt commands, deployment, testing, Apex coverage, org drift, org health audits/monitoring, docs generation, or release manifests; (2) you see a .sfdt/ directory or sfdx-project.json and the user wants CLI-driven workflows; (3) the user says sfdt should/could support something, wants to add a command, extend config, or suggests sfdt can help with a task — this means implementing the feature in the CLI itself."
+      "description": "Production-grade Apex code review for this Salesforce project. Catches SOQL/DML in loops, CRUD/FLS gaps, missing bulkification, hardcoded IDs, empty catches, stale API versions, deprecated testMethod, Trigger.oldMap omissions, Datetime/Date type mismatches, unbounded @AuraEnabled queries, null relationship traversals, Database.Stateful waste, global vs public misuse, constant expressions inside loops, and missing batch idempotency guards. Use whenever reviewing or writing any .cls or .trigger file, or when asked to audit, review, check, or security-scan any Apex code — even if the user does not explicitly say \"apex review\"."
+    },
+    {
+      "name": "sf-data",
+      "path": "skills/sf-data/SKILL.md",
+      "folderPath": "skills/sf-data",
+      "category": "salesforce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "SOQL query writing, data export/import, bulk upsert/delete, and data management for this Salesforce project. Use whenever writing or reviewing any SOQL query, loading or extracting org data, seeding sandboxes, running anonymous Apex for data fixes, or when the user mentions CSV loads, tree exports, aggregate queries, or governor limits on queries."
+    },
+    {
+      "name": "sf-deploy",
+      "path": "skills/sf-deploy/SKILL.md",
+      "folderPath": "skills/sf-deploy",
+      "category": "salesforce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Salesforce CLI deployment skill for this project — deploy metadata to any org, retrieve metadata, validate, quick-deploy, and cancel stuck deploys. Use whenever the user wants to deploy, push, retrieve, validate, or promote Salesforce metadata, mentions package.xml or destructive changes, or asks \"how do I get this to the sandbox/production\" — even if they don't say \"deploy\"."
+    },
+    {
+      "name": "sf-flow-review",
+      "path": "skills/sf-flow-review/SKILL.md",
+      "folderPath": "skills/sf-flow-review",
+      "category": "salesforce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Review Salesforce Flow metadata for best practices — fault paths, bulk safety, element naming, auto-layout, duplicate automation, and Flow vs Apex decision guidance. Use whenever reviewing, writing, or debugging any .flow-meta.xml file, or when the user asks about flows, record-triggered automation, process builder migration, or \"why is my flow failing\" — even if they don't say \"review\"."
+    },
+    {
+      "name": "sf-lwc",
+      "path": "skills/sf-lwc/SKILL.md",
+      "folderPath": "skills/sf-lwc",
+      "category": "salesforce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Lightning Web Component development guidance — component structure, wire adapters, event patterns, SLDS styling, accessibility, and common pitfalls. Use whenever creating, editing, or reviewing any file in an lwc/ bundle (.html template, .js controller, .js-meta.xml), or when the user mentions Lightning components, wire adapters, App Builder properties, or component events — even if they just say \"build me a component\"."
+    },
+    {
+      "name": "sf-org-audit",
+      "path": "skills/sf-org-audit/SKILL.md",
+      "folderPath": "skills/sf-org-audit",
+      "category": "salesforce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Full health audit of this Salesforce project — summarizes Apex class count, test coverage gaps, trigger patterns, flow inventory, LWC count, CI/CD status, and generates a prioritized remediation report. Use whenever the user asks for a health check, audit, project analysis, technical-debt assessment, or \"how bad is this org/codebase\" — anything that calls for a whole-project view rather than a single-file review."
+    },
+    {
+      "name": "sf-pmd-scan",
+      "path": "skills/sf-pmd-scan/SKILL.md",
+      "folderPath": "skills/sf-pmd-scan",
+      "category": "salesforce",
+      "files": [
+        "SKILL.md"
+      ],
+      "description": "Run Salesforce Code Analyzer v5 (PMD + ESLint + Graph Engine) against this project, parse results, prioritize findings, and generate fix recommendations. Use whenever the user asks about static analysis, PMD, linting, code scanning, code quality gates, or CI quality checks for Apex/LWC — even if they just say \"scan my code\" or \"is my code clean\"."
     },
     {
       "name": "sf-scratch-org",
@@ -36,74 +93,17 @@
       "description": "Run Apex tests, analyze code coverage, find untested paths, and generate test classes for this Salesforce project. Use whenever writing or reviewing any @isTest class, running tests, investigating coverage gaps or test failures, or when the user asks \"why is coverage low\", \"write a test for this\", or mentions deployment test requirements."
     },
     {
-      "name": "sf-pmd-scan",
-      "path": "skills/sf-pmd-scan/SKILL.md",
-      "folderPath": "skills/sf-pmd-scan",
-      "category": "salesforce",
+      "name": "sfdt-cli",
+      "path": "skills/sfdt-cli/SKILL.md",
+      "folderPath": "skills/sfdt-cli",
+      "category": "sfdt",
       "files": [
-        "SKILL.md"
+        "SKILL.md",
+        "references/commands.md",
+        "references/config.md",
+        "references/development.md"
       ],
-      "description": "Run Salesforce Code Analyzer v5 (PMD + ESLint + Graph Engine) against this project, parse results, prioritize findings, and generate fix recommendations. Use whenever the user asks about static analysis, PMD, linting, code scanning, code quality gates, or CI quality checks for Apex/LWC — even if they just say \"scan my code\" or \"is my code clean\"."
-    },
-    {
-      "name": "sf-org-audit",
-      "path": "skills/sf-org-audit/SKILL.md",
-      "folderPath": "skills/sf-org-audit",
-      "category": "salesforce",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Full health audit of this Salesforce project — summarizes Apex class count, test coverage gaps, trigger patterns, flow inventory, LWC count, CI/CD status, and generates a prioritized remediation report. Use whenever the user asks for a health check, audit, project analysis, technical-debt assessment, or \"how bad is this org/codebase\" — anything that calls for a whole-project view rather than a single-file review."
-    },
-    {
-      "name": "sf-lwc",
-      "path": "skills/sf-lwc/SKILL.md",
-      "folderPath": "skills/sf-lwc",
-      "category": "salesforce",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Lightning Web Component development guidance — component structure, wire adapters, event patterns, SLDS styling, accessibility, and common pitfalls. Use whenever creating, editing, or reviewing any file in an lwc/ bundle (.html template, .js controller, .js-meta.xml), or when the user mentions Lightning components, wire adapters, App Builder properties, or component events — even if they just say \"build me a component\"."
-    },
-    {
-      "name": "sf-flow-review",
-      "path": "skills/sf-flow-review/SKILL.md",
-      "folderPath": "skills/sf-flow-review",
-      "category": "salesforce",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Review Salesforce Flow metadata for best practices — fault paths, bulk safety, element naming, auto-layout, duplicate automation, and Flow vs Apex decision guidance. Use whenever reviewing, writing, or debugging any .flow-meta.xml file, or when the user asks about flows, record-triggered automation, process builder migration, or \"why is my flow failing\" — even if they don't say \"review\"."
-    },
-    {
-      "name": "sf-deploy",
-      "path": "skills/sf-deploy/SKILL.md",
-      "folderPath": "skills/sf-deploy",
-      "category": "salesforce",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Salesforce CLI deployment skill for this project — deploy metadata to any org, retrieve metadata, validate, quick-deploy, and cancel stuck deploys. Use whenever the user wants to deploy, push, retrieve, validate, or promote Salesforce metadata, mentions package.xml or destructive changes, or asks \"how do I get this to the sandbox/production\" — even if they don't say \"deploy\"."
-    },
-    {
-      "name": "sf-data",
-      "path": "skills/sf-data/SKILL.md",
-      "folderPath": "skills/sf-data",
-      "category": "salesforce",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "SOQL query writing, data export/import, bulk upsert/delete, and data management for this Salesforce project. Use whenever writing or reviewing any SOQL query, loading or extracting org data, seeding sandboxes, running anonymous Apex for data fixes, or when the user mentions CSV loads, tree exports, aggregate queries, or governor limits on queries."
-    },
-    {
-      "name": "sf-apex-review",
-      "path": "skills/sf-apex-review/SKILL.md",
-      "folderPath": "skills/sf-apex-review",
-      "category": "salesforce",
-      "files": [
-        "SKILL.md"
-      ],
-      "description": "Production-grade Apex code review for this Salesforce project. Catches SOQL/DML in loops, CRUD/FLS gaps, missing bulkification, hardcoded IDs, empty catches, stale API versions, deprecated testMethod, Trigger.oldMap omissions, Datetime/Date type mismatches, unbounded @AuraEnabled queries, null relationship traversals, Database.Stateful waste, global vs public misuse, constant expressions inside loops, and missing batch idempotency guards. Use whenever reviewing or writing any .cls or .trigger file, or when asked to audit, review, check, or security-scan any Apex code — even if the user does not explicitly say \"apex review\"."
+      "description": "Guide for using AND contributing to the @sfdt/cli (Salesforce DevTools) CLI. Use when: (1) the user mentions sfdt commands, deployment, testing, Apex coverage, org drift, org health audits/monitoring, docs generation, or release manifests; (2) you see a .sfdt/ directory or sfdx-project.json and the user wants CLI-driven workflows; (3) the user says sfdt should/could support something, wants to add a command, extend config, or suggests sfdt can help with a task — this means implementing the feature in the CLI itself."
     }
   ]
 }
