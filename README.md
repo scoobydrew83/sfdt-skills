@@ -64,7 +64,7 @@ sfdt skills export --target pack --out ../sfdt-skills
 Open issues and PRs against [scoobydrew83/sfdt](https://github.com/scoobydrew83/sfdt),
 not here — edits made directly to this repo are overwritten by the next sync.
 
-Synced from `@sfdt/cli` v0.19.0.
+Synced from `@sfdt/cli` v0.20.0.
 
 ## License
 
